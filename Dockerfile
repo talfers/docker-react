@@ -9,7 +9,7 @@ WORKDIR /app
 COPY /package.json ./
 
 # Install dependencies
-RUN npm Install
+RUN npm install
 
 # Copy over all project files
 COPY ./ ./
