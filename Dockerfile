@@ -22,7 +22,7 @@ RUN npm run build
 FROM nginx
 
 # Expose correct port for AWS (elastic beanstalk)
-EXPOSE 80
+# EXPOSE 80
 
-# Copy over build directory to nginx directory
+# Copy over build directory (files that need a server) to nginx directory
 COPY --from=0 /app/build /usr/share/nginx/html
